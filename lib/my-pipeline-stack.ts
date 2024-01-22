@@ -22,7 +22,7 @@ export class MyPipelineStack extends cdk.Stack {
       }
     }));
 
-    testStage.addPost(new ManualApprovalStep('approval'));
+    // testStage.addPost(new ManualApprovalStep('approval'));
 
   }
 }
