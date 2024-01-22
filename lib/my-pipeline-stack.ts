@@ -22,7 +22,15 @@ export class MyPipelineStack extends cdk.Stack {
       }
     }));
 
-    // testStage.addPost(new ManualApprovalStep('approval'));
+    testStage.addPost(new ManualApprovalStep('approval'));
+
+    const test2Stage = pipeline.addStage(new MyPipelineAppStage(this, 'test2', {
+      env: {
+        account: '283632290378',
+        region: 'us-east-1'
+      }
+    }));
+   
 
   }
 }
